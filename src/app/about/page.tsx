@@ -131,8 +131,9 @@ export default function AboutPage() {
                             src="/images/founder.jpg"
                             alt="Henry Aniagu - Founder of CareBot AI"
                             fill
-                            className="object-cover scale-110 object-[center_90%]"
+                            className="object-cover scale-110 object-[center_90%] pointer-events-none select-none"
                             sizes="(max-width: 768px) 256px, 350px"
+                            style={{ WebkitTouchCallout: 'none' }}
                         />
                     </div>
 

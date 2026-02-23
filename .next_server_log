@@ -698,3 +698,9 @@ TypeError: Cannot read properties of null (reading 'useEffect')
 [RateLimiter] Result for ::1: success=false, remaining=0
  POST /api/chat 429 in 50ms (compile: 26ms, render: 24ms)
 ✓ Compiled in 807ms
+[RateLimiter] Checking IP: ::1
+✓ Compiled in 26ms
+[RateLimiter] Result for ::1: success=true, remaining=4
+ POST /api/chat 200 in 1837ms (compile: 215ms, render: 1621ms)
+✓ Compiled in 1582ms
+✓ Compiled in 270ms

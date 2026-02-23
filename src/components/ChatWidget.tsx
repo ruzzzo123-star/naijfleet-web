@@ -92,12 +92,12 @@ export default function ChatWidget() {
     };
 
     return (
-        <div ref={widgetRef} className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-4">
+        <div ref={widgetRef} className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-4 sm:pointer-events-auto">
 
             {/* Chat Drawer */}
             <div
                 ref={drawerRef}
-                className="hidden relative w-full sm:w-[380px] h-[500px] max-h-[80vh] bg-surface border border-white/10 rounded-2xl flex-col overflow-hidden shadow-2xl"
+                className="hidden relative w-[calc(100vw-32px)] sm:w-[380px] h-[500px] max-h-[85vh] bg-surface border border-white/10 rounded-2xl flex-col overflow-hidden shadow-2xl"
             >
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 bg-[#0D0D0D] border-b border-white/10 shrink-0">
@@ -185,7 +185,7 @@ export default function ChatWidget() {
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Ask me anything..."
-                            className="w-full bg-surface border border-white/10 text-white px-4 py-3 rounded-xl pr-12 text-sm focus:outline-none focus:border-accent transition-colors"
+                            className="w-full bg-surface border border-white/10 text-white px-4 py-3 rounded-xl pr-12 text-base md:text-sm focus:outline-none focus:border-accent transition-colors"
                             disabled={isLoading}
                         />
                         <button
