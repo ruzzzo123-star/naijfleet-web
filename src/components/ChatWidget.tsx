@@ -12,10 +12,24 @@ type Message = {
 
 export default function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
+    const [showNudge, setShowNudge] = useState(false);
     const [messages, setMessages] = useState<Message[]>([
-        { role: "assistant", content: "Hi! I'm CareBot, your NaijFleet assistant. How can I help you today?" }
+        { role: "assistant", content: "Hi! I'm Ruzzo, your CareBot AI assistant. How can I help you today?" }
     ]);
     const [input, setInput] = useState("");
+
+    // Show engagement nudge after 5 seconds of inactivity
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (!isOpen) setShowNudge(true);
+        }, 5000);
+        return () => clearTimeout(timer);
+    }, [isOpen]);
+
+    // Hide nudge when opened
+    useEffect(() => {
+        if (isOpen) setShowNudge(false);
+    }, [isOpen]);
     const [isLoading, setIsLoading] = useState(false);
 
     const widgetRef = useRef<HTMLDivElement>(null);
@@ -92,7 +106,7 @@ export default function ChatWidget() {
                             <Bot size={18} />
                         </div>
                         <div>
-                            <h3 className="text-white font-medium text-sm">CareBot AI</h3>
+                            <h3 className="text-white font-medium text-sm">Ruzzo AI Assistant</h3>
                             <p className="text-success text-xs flex items-center gap-1">
                                 <span className="w-1.5 h-1.5 rounded-full bg-success"></span> Online
                             </p>
@@ -152,14 +166,23 @@ export default function ChatWidget() {
                 </div>
             </div>
 
-            {/* Toggle Button */}
-            <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="w-14 h-14 bg-accent text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300 relative group"
-            >
-                <div className="absolute inset-0 rounded-full bg-accent opacity-0 group-hover:opacity-40 blur-md transition-opacity duration-300"></div>
-                {isOpen ? <X size={24} className="relative z-10" /> : <MessageCircle size={24} className="relative z-10" />}
-            </button>
+            {/* Toggle Button & Nudge Tooltip */}
+            <div className="relative flex items-center justify-end">
+                {/* Nudge Tooltip */}
+                <div className={`absolute right-full mr-4 bg-white text-black text-sm font-medium py-2 px-4 rounded-xl shadow-lg whitespace-nowrap transition-all duration-500 origin-right ${showNudge ? "opacity-100 scale-100 translate-x-0" : "opacity-0 scale-95 translate-x-4 pointer-events-none"}`}>
+                    Hi, I'm Ruzzo. Need help finding the right tool? 👋
+                    {/* Little triangle pointer */}
+                    <div className="absolute top-1/2 -translate-y-1/2 -right-1.5 w-3 h-3 bg-white rotate-45"></div>
+                </div>
+
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className="w-14 h-14 bg-accent text-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform duration-300 relative group"
+                >
+                    <div className="absolute inset-0 rounded-full bg-accent opacity-0 group-hover:opacity-40 blur-md transition-opacity duration-300"></div>
+                    {isOpen ? <X size={24} className="relative z-10" /> : <MessageCircle size={24} className="relative z-10" />}
+                </button>
+            </div>
 
         </div>
     );
