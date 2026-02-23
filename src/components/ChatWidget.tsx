@@ -122,16 +122,49 @@ export default function ChatWidget() {
 
                 {/* Messages Area */}
                 <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-primary/50 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
-                    {messages.map((msg, i) => (
-                        <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-                            <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${msg.role === "user"
-                                ? "bg-accent text-white rounded-br-sm"
-                                : "bg-white/10 text-white rounded-bl-sm border border-white/5"
-                                }`}>
-                                {msg.content}
+                    {messages.map((msg, i) => {
+                        // Helper to find and linkify URLs in the text
+                        const renderMessageWithLinks = (text: string) => {
+                            const urlRegex = /(https?:\/\/[^\s]+)/g;
+                            const parts = text.split(urlRegex);
+                            return parts.map((part, index) => {
+                                if (part.match(urlRegex)) {
+                                    // Handle trailing punctuation often attached by AI
+                                    let cleanUrl = part;
+                                    let punctuation = "";
+                                    if (part.endsWith('.') || part.endsWith(',') || part.endsWith('!')) {
+                                        cleanUrl = part.slice(0, -1);
+                                        punctuation = part.slice(-1);
+                                    }
+                                    return (
+                                        <span key={index}>
+                                            <a
+                                                href={cleanUrl}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className={`underline font-medium transition-colors ${msg.role === "user" ? "text-white hover:text-white/80" : "text-accent hover:text-white"}`}
+                                            >
+                                                {cleanUrl}
+                                            </a>
+                                            {punctuation}
+                                        </span>
+                                    );
+                                }
+                                return <span key={index}>{part}</span>;
+                            });
+                        };
+
+                        return (
+                            <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                                <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed ${msg.role === "user"
+                                    ? "bg-accent text-white rounded-br-sm"
+                                    : "bg-white/10 text-white rounded-bl-sm border border-white/5"
+                                    }`}>
+                                    {renderMessageWithLinks(msg.content)}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                     {isLoading && (
                         <div className="flex justify-start">
                             <div className="bg-white/10 border border-white/5 rounded-2xl rounded-bl-sm px-4 py-3 flex items-center gap-2">

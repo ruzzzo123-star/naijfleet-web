@@ -664,3 +664,37 @@ TypeError: Cannot read properties of null (reading 'useEffect')
 [RateLimiter] Checking IP: ::1
 [RateLimiter] Result for ::1: success=true, remaining=4
  POST /api/chat 200 in 1347ms (compile: 97ms, render: 1250ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=4
+ POST /api/chat 200 in 1991ms (compile: 758ms, render: 1234ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=4
+ POST /api/chat 200 in 1098ms (compile: 110ms, render: 988ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 1019ms (compile: 40ms, render: 979ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 1104ms (compile: 44ms, render: 1061ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=2
+ POST /api/chat 200 in 1325ms (compile: 28ms, render: 1296ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=1
+ POST /api/chat 200 in 965ms (compile: 28ms, render: 936ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=0
+ POST /api/chat 200 in 982ms (compile: 55ms, render: 928ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=false, remaining=0
+ POST /api/chat 429 in 372ms (compile: 25ms, render: 347ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=false, remaining=0
+ POST /api/chat 429 in 51ms (compile: 31ms, render: 21ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=false, remaining=0
+ POST /api/chat 429 in 69ms (compile: 50ms, render: 19ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=false, remaining=0
+ POST /api/chat 429 in 50ms (compile: 26ms, render: 24ms)
+✓ Compiled in 807ms
