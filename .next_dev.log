@@ -1,0 +1,71 @@
+
+> naijfleet-web@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.120:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 977ms
+ GET / 200 in 883ms (compile: 616ms, render: 267ms)
+ GET /products/naijfleet 200 in 823ms (compile: 736ms, render: 86ms)
+ GET / 200 in 36ms (compile: 10ms, render: 25ms)
+ GET /products 200 in 166ms (compile: 145ms, render: 21ms)
+ GET /products/wellness 200 in 338ms (compile: 310ms, render: 28ms)
+ GET / 200 in 105ms (compile: 57ms, render: 48ms)
+✓ Compiled in 1645ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /products/naijfleet 200 in 540ms (compile: 283ms, render: 257ms)
+✓ Compiled in 403ms
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /products/naijfleet 200 in 391ms (compile: 162ms, render: 230ms)
+ GET /products 200 in 183ms (compile: 127ms, render: 56ms)
+ GET /products/naijfleet 200 in 21ms (compile: 6ms, render: 14ms)
+ GET /products/wellness 200 in 210ms (compile: 117ms, render: 94ms)
+ GET / 200 in 73ms (compile: 19ms, render: 54ms)
+✓ Compiled in 1283ms
+ GET / 200 in 534ms (compile: 337ms, render: 197ms)
+✓ Compiled in 609ms
+✓ Compiled in 237ms
+✓ Compiled in 251ms
+ GET /products/naijfleet 200 in 479ms (compile: 397ms, render: 81ms)
+ GET / 200 in 539ms (compile: 357ms, render: 183ms)
+ GET / 200 in 124ms (compile: 49ms, render: 74ms)
+ GET /products 200 in 91ms (compile: 66ms, render: 25ms)
+ GET /products/naijfleet 200 in 19ms (compile: 3ms, render: 15ms)
+ GET /products/naijfleet 200 in 94ms (compile: 12ms, render: 81ms)
+ GET /products 200 in 29ms (compile: 8ms, render: 21ms)
+ GET /products/wellness 200 in 45ms (compile: 28ms, render: 17ms)
+ GET /about 200 in 346ms (compile: 322ms, render: 25ms)
+ GET /products 200 in 40ms (compile: 8ms, render: 32ms)
+ GET /products/wellness 200 in 32ms (compile: 10ms, render: 22ms)
+ GET /products 200 in 40ms (compile: 12ms, render: 28ms)
+ GET /products/owomi 200 in 130ms (compile: 117ms, render: 13ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=4
+(node:72568) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ POST /api/chat 200 in 2.7s (compile: 506ms, render: 2.2s)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 702ms (compile: 23ms, render: 679ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 680ms (compile: 53ms, render: 627ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 599ms (compile: 24ms, render: 575ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=3
+ POST /api/chat 200 in 641ms (compile: 40ms, render: 601ms)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=2
+ POST /api/chat 200 in 12.8s (compile: 16ms, render: 12.8s)
+[RateLimiter] Checking IP: ::1
+[RateLimiter] Result for ::1: success=true, remaining=4
+ POST /api/chat 200 in 14.0s (compile: 23ms, render: 14.0s)
+ GET / 200 in 306ms (compile: 62ms, render: 245ms)
+ HEAD / 200 in 232ms (compile: 61ms, render: 171ms)
+[?25h
