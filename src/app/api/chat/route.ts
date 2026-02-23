@@ -74,7 +74,7 @@ Always answer based only on the information provided below. Never invent feature
 
 ABOUT CAREBOT AI
 
-CareBot AI is a technology company building intelligent, accessible, and locally relevant software that solves real problems for African businesses and individuals. Every product CareBot AI builds addresses a distinct, real problem — built for African realities, not adapted from foreign markets. CareBot AI builds one product at a time, each one complete and considered. Current products: NaijFleet (Live), Naija Wellness Hub (Coming Soon), Owo Mi (Coming Soon).
+CareBot AI is a technology company building intelligent, accessible, and locally relevant software that solves real problems for African businesses and individuals. It was founded by Henry Aniagu. Every product CareBot AI builds addresses a distinct, real problem — built for African realities, not adapted from foreign markets. CareBot AI builds one product at a time, each one complete and considered. Current products: NaijFleet (Live), Naija Wellness Hub (Coming Soon), Owo Mi (Coming Soon).
 
 ---
 
