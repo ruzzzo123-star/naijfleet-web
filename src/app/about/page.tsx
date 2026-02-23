@@ -139,7 +139,7 @@ export default function AboutPage() {
 
                     {/* Founder Quote */}
                     <blockquote className="text-2xl md:text-4xl font-playfair italic text-white leading-relaxed max-w-3xl">
-                        "I built NaijFleet because I watched logistics operators in Lagos run entire fleets from WhatsApp groups and prayer. They deserved better tools."
+                        "I built NaijFleet because I watched logistics operators in Lagos run entire fleets from WhatsApp groups and prayer. They deserve better tools."
                     </blockquote>
 
                     {/* Founder Name */}
