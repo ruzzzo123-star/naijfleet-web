@@ -147,6 +147,16 @@ export default function AboutPage() {
                         <div className="font-sans font-bold text-xl text-white">Henry Aniagu</div>
                         <div className="font-mono text-xs tracking-widest text-[#F59E0B] uppercase">Founder, CareBot AI</div>
                     </div>
+
+                    {/* Market Thesis */}
+                    <div className="max-w-3xl mx-auto pt-8 text-left text-lg md:text-xl text-[#888888] leading-relaxed space-y-6">
+                        <p>
+                            Nigeria's logistics operators run on WhatsApp — and that is the opportunity. An estimated 85–95% of digitally connected logistics operators in Nigeria rely on WhatsApp as their primary coordination tool. This represents both a massive infrastructure failure and a billion-dollar market opportunity.
+                        </p>
+                        <p>
+                            For NaijFleet, this means the addressable market is not a niche; it is the market itself. Our goal is not to force operators to abandon the tools they already know, but to extend them — turning chaotic group chats into structured, scalable operations.
+                        </p>
+                    </div>
                 </div>
             </div>
 

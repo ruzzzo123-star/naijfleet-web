@@ -705,3 +705,9 @@ TypeError: Cannot read properties of null (reading 'useEffect')
 ✓ Compiled in 1582ms
 ✓ Compiled in 270ms
 ✓ Compiled in 439ms
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /products 200 in 3.4s (compile: 2.6s, render: 752ms)
+ GET /products 200 in 172ms (compile: 38ms, render: 134ms)
+⚠ metadataBase property in metadata export is not set for resolving social open graph or twitter images, using "http://localhost:3000". See https://nextjs.org/docs/app/api-reference/functions/generate-metadata#metadatabase
+ GET /products/naijfleet 200 in 267ms (compile: 223ms, render: 44ms)
+✓ Compiled in 1046ms
